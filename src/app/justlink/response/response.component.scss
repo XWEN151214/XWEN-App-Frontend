@@ -1,0 +1,50 @@
+/* */
+
+.response
+{
+    height: 90%;
+    overflow-y: hidden;
+}
+
+.textarea
+{
+    width: 100%;
+    height: 21rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    border: 1.5px #000 solid;
+    overflow-y: scroll;
+}
+
+h4
+{
+    color: var(--primary);
+}
+
+fa-icon
+{
+    color: var(--primary)
+}
+
+a
+{
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+/* content text */
+
+.content-text
+{
+    height: 100%;
+}
+
+@media (max-width: 644px)
+{
+    .textarea
+    {
+        height: 15rem;
+    }
+}
+
+

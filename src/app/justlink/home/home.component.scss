@@ -1,0 +1,138 @@
+/* Home*/
+
+.home
+{
+    flex-direction: column;
+    height: 90%;
+}
+
+/* Main */
+.main
+{
+    height: 75%;
+}
+
+.main .text-field
+{
+    flex-direction: column;
+    position: absolute;
+    bottom: 50%;
+    top: 50%;
+}
+
+.main .logo
+{
+    width: 15rem;
+    transition: 1s;
+}
+
+.main .logo:hover
+{
+    transform: scale(1.1);
+}
+
+.input
+{
+    position: absolute;
+    top: 6rem;
+}
+
+.main .link
+{
+    width: 20rem;
+    height: 2.5rem;
+    color: var(--primary);
+    font-weight: 500;
+    border: 1.5px solid var(--primary);
+    outline: none;
+}
+
+.main .link-error
+{
+    width: 20rem;
+    height: 2.5rem;
+    color: #ff0000;
+    font-weight: 500;
+    border: 1.5px solid #ff0000;
+    outline: none;
+}
+
+.main .link-btn
+{
+    height: 2.5rem;
+    width: 2.5rem;
+    outline: none;
+    border: none;
+    background-color: var(--primary);
+    color: var(--tertiary);
+}
+
+.main .link-btn:hover
+{
+    background-color: var(--secondary);
+    transition: 1s;
+}
+
+.main .link-btn:hover 
+{
+    transform: rotate(360deg);
+    transition: 0.5s;
+}
+
+.main .link:focus
+{
+    border: 2px solid var(--secondary);
+}
+
+.main .link::placeholder
+{
+    color: var(--primary);
+}
+
+.main .main-select
+{
+    padding-top: 1rem;
+    position: absolute;
+    top: 6rem;
+}
+
+.main .main-select a
+{
+    color: var(--secondary);
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 2rem;
+}
+
+.main .main-select a:hover
+{
+    color: var(--primary);
+    transition: 1s;
+}
+
+.main .elements
+{
+    padding-top: 1rem;
+    position: absolute;
+    top: 6rem;
+}
+
+.main .elements select,
+.main .elements button
+{
+    margin-top: 2rem;
+}
+
+.main .report select
+{
+    outline: none;
+}
+
+@media (max-width: 320px)
+{
+    .main .link
+    {
+        width: 15rem;
+    }
+}
+

@@ -1,0 +1,31 @@
+<!--Response-->
+<section class="response">
+    <div class="menu">
+        <div class="container">
+            <ul class="menu-links d-flex align-items-center pt-4">
+                <li class="guide-link" data-aos="fade-in" data-aos-duration="1000">
+                    <a href="/justlink">
+                        <img src="logo.png" alt="main-logo">
+                    </a>
+                </li>
+                <li class="profile-link" data-aos="fade-in" data-aos-duration="1000">
+                    <fa-icon [icon]="faQuestion"></fa-icon>
+                    <a href="/justlink/help">
+                        How To Use
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content-text d-flex justify-content-center align-items-center" data-aos="fade-right" data-aos-duration="1000">
+        <div class="container">
+            <h4 class="text-center">Your {{contentTitle}}</h4>
+            <div class="textarea" id="myContent" #myContent></div>
+            <div class="container d-flex justify-content-center pb-4 pt-2">
+                <fa-icon [icon]="faRedo"></fa-icon>
+                <a class="mx-2" href="/justlink" (click)="clearStorage()">Generate More</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Response-->

@@ -1,0 +1,81 @@
+<!--Home Section-->
+<section class="home">
+    <!--Menu-->
+    <div class="menu">
+        <div class="container">
+            <ul class="menu-links d-flex">
+                <li class="guide-link" data-aos="fade-in" data-aos-duration="1000">
+                    <fa-icon [icon]="faQuestion"></fa-icon>
+                    <a href="/juslink/help">
+                        How To Use
+                    </a>
+                </li>
+                <li class="profile-link" data-aos="fade-in" data-aos-duration="1000">
+                    <fa-icon [icon]="faGlobe"></fa-icon>
+                    <a href="/">
+                        Visit Xwen CO.
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--End Menu-->
+    <!--Main-->
+    <div class="main d-flex justify-content-center align-items-center">
+        <div class="text-field d-flex justify-content-center align-items-center">
+            <div class="main-logo">
+                <img class="logo" src="logo.png" alt="logo" data-aos="fade-up" data-aos-duration="1000">
+            </div>
+            <div class="input d-flex justify-content-center align-items-center" data-aos="fade-right" data-aos-duration="1000">
+                <input class="link" id="inputLink" type="text" placeholder="Paste link here" #myInput>
+                <button class="link-btn" (click)="scrapeContent(myInput.value)">
+                    <fa-icon [icon]="faArrowRight"></fa-icon>
+                </button>
+            </div>
+            <div class="main-select d-flex justify-content-center align-items-center" id="mainSelect" *ngIf="showMainSelect" data-aos="fade-up" data-aos-duration="1000" #mainSelect>
+                <a class="select-report mx-4" (click)="showElements('report')">Report</a>
+                <a class="select-summary mx-4" (click)="showElements('summary')">Summary</a>
+                <a class="select-bullets mx-4" (click)="showElements('bullets')">Bullets</a>
+            </div>
+            <div class="report elements d-flex justify-content-center align-items-center" *ngIf="doShowElements[0]" data-aos="fade-up" data-aos-duration="1000" #report>
+                <select class="report-format mx-4" #reportFormat>
+                    <option>Informational</option>
+                    <option>Analytical</option>
+                    <option>Business</option>
+                </select>
+                <select class="report-count mx-4" #reportCount>
+                    <option>100</option>
+                    <option>150 - 250</option>
+                    <option>250+</option>
+                </select>
+                <select class="report-tone mx-4" #reportTone>
+                    <option>Formal</option>
+                    <option>Informal</option>
+                    <option>Professional</option>
+                </select>
+                <button class="btn btn-primary mx-4" (click)="genReport(content, title, reportFormat.value, reportCount.value, reportTone.value)">Next</button>
+            </div>
+            <div class="summary elements d-flex justify-content-center align-items-center" *ngIf="doShowElements[1]" data-aos="fade-up" data-aos-duration="1000" #summary>
+                <select class="report-count mx-4" #summaryCount>
+                    <option>100</option>
+                    <option>150 - 250</option>
+                    <option>250+</option>
+                </select>
+                <button class="btn btn-primary mx-4" (click)="genSummary(content, title, summaryCount.value)">Next</button>
+            </div>
+            <div class="bullets elements d-flex justify-content-center align-items-center" *ngIf="doShowElements[2]" data-aos="fade-up" data-aos-duration="1000" #bullets>
+                <div>
+                    <label class="p-0 m-0" for="bc">Word Count</label>
+                    <select class="bullet-count mx-4" id="bc" #bulletsCount>
+                        <option>10</option>
+                        <option>20</option>
+                        <option>30</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary mx-4 my-0" (click)="genBullets(content, title, bulletsCount.value)">Next</button>
+            </div>
+        </div>
+    </div>
+    <!--End Main-->
+    <app-spinner *ngIf="showSpinner"></app-spinner>
+</section>

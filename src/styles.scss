@@ -1,0 +1,109 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/aos/src/sass/aos.scss';
+
+:root
+{
+    --primary: #004aad;
+    --secondary: #00a1ff;
+    --tertiary: #ffff;
+}
+
+html
+{
+    height: 100%;
+}
+
+body
+{
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+li
+{
+    list-style-type: none; 
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.btn
+{
+    background-color: var(--primary);
+    width: 5rem;
+    color: var(--tertiary);
+    border: none;
+}
+
+/* Menu */
+
+.menu
+{
+    padding: 1rem;
+}
+
+.menu-links
+{
+    color: var(--primary);
+}
+
+.menu-links .guide-link
+{
+    position: absolute;
+    left: 4rem;
+}
+
+.menu-links .profile-link
+{
+    position: absolute;
+    right: 4rem;
+}
+
+.menu-links a
+{
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.menu-links a:hover
+{
+    color: var(--primary);
+    transition: 1s;
+}
+
+.menu-links img
+{
+    width: 5rem;
+}
+
+@media (max-width: 601px)
+{
+    .menu-links .guide-link
+    {  
+        left: 1rem;
+    }
+    
+    .menu-links .profile-link
+    {
+        right: 1rem;
+    }  
+}
+
+@media (max-width: 2561px) and (min-width: 2000px)
+{
+    .menu-links .guide-link
+    {  
+        left: 15rem;
+    }
+    
+    .menu-links .profile-link
+    {
+        right: 15rem;
+    }
+}
+
+
